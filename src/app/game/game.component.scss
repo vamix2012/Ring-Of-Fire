@@ -1,48 +1,94 @@
 .field {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    background-image: url('../../assets/board.jpg');
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  background-image: url('../../assets/board.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
 .card-stack {
-    position: relative;
-    img {
-        position: absolute;
-        width: 120px;
-    }
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 120px;
+  }
 }
 
 .top-card {
-    cursor: pointer;
-    transition: all 125ms ease-in-out;
-    &:hover {
-        transform: scale(1.03) translateY(-10px);
-    }
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.03) translateY(-10px);
+  }
 }
 
 .pick-card {
-    animation: pick-card-animation 1s ease-in-out;
-    transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);
+  animation: pick-card-animation 900ms ease-in-out;
+  transform: scale(1) translateX(140px) translateY(-180px) rotate(-10deg);
+}
+
+.played-card {
+  right: 16px;
+  top: 16px;
+  transform: scale(1) translateX(140px) translateY(-180px) rotate(-10deg);
+
 }
 
 @keyframes pick-card-animation {
-    0%{
-        transform: scale(1);
-    }
-    30%{
- transform: scale(1.3);
-    }
-    60%{
- transform: scale(1.7);
-    }
-    100%{
-       transform: scale(1.3) translateX(140px) translateY(-180px) rotate(-10deg);  
-    }
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+ 20% {
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(1.3);
+  }
+
+  40% {
+    transform: scale(1.4);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1.6);
+  }
+  70% {
+    transform: scale(1.5);
+  }
+  80% {
+    transform: scale(1.3) translateX(100px) translateY(-140px) rotate(-10deg);
+  }
+  90% {
+    transform: scale(1.2) translateX(120px) translateY(-160px) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1) translateX(140px) translateY(-180px) rotate(-10deg);
+  }
 
 
+}
+
+.playerPosition {
+  position: absolute;
+  right: 0;
+}
+
+.btn-add {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
 }
