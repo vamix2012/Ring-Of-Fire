@@ -1,8 +1,9 @@
 .player {
 display: flex;
 align-items: center;
-background-color: orange;
-width: 300px;
+background-color: rgba(50, 50, 50, 0.7);
+overflow: hidden;
+width: 350px;
 border-top-left-radius: 50px;
 border-bottom-left-radius: 50px;
 span {
@@ -11,9 +12,14 @@ span {
 }
 
     img {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active {
+    background-color: orange !important;
+    width: 375px;
 }
