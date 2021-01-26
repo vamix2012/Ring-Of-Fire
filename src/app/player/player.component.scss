@@ -4,11 +4,17 @@ align-items: center;
 background-color: rgba(50, 50, 50, 0.7);
 overflow: hidden;
 width: 350px;
+height: 70px;
 border-top-left-radius: 50px;
 border-bottom-left-radius: 50px;
 span {
-    font-size: 32px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 28px;
     margin-left: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 28px;
 }
 
     img {
@@ -22,4 +28,15 @@ span {
 .player-active {
     background-color: orange !important;
     width: 375px;
+}
+
+@media(max-width: 1000px){
+   .player {
+       width: 250px;
+      
+       
+   }
+   .player-active {
+       width: 275px;
+   }
 }

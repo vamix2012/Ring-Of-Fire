@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ring-of-fire-320dc": {
+      "hosting": {
+        "ringoffire": [
+          "ring-of-fire-320dc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ring-of-fire-320dc"
+  }
+}
