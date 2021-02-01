@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-player-dialog',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPlayerDialogComponent implements OnInit {
 name: string = '';
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<AddPlayerDialogComponent>) { }
 
   ngOnInit(): void {
+  }
+
+
+
+  @HostListener('document:keydown.enter', ['$event'])
+  closeDialog(){
+    this.dialogRef.close(this.name);
   }
 
   

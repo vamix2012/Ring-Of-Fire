@@ -58,7 +58,7 @@ export class GameComponent implements OnInit {
       if (change == 'DELETE') {
         this.game.players.splice(playerId, 1);
         this.game.playerImages.splice(playerId, 1);
-      } else {
+      } else if(change){
         this.game.playerImages[playerId] = change;
       }
       this.saveGame();
